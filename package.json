@@ -1,0 +1,38 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "A CLI tool for finding differences between two data structures",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "keywords": [
+    "cli",
+    "json",
+    "yml"
+  ],
+  "homepage": "https://github.com/yurshul/backend-project-lvl2#readme",
+  "bugs": {
+    "url": "https://github.com/yurshul/backend-project-lvl2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurshul/backend-project-lvl2.git"
+  },
+  "license": "ISC",
+  "author": "Yuriy Shulga",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "commander": "^14.0.3"
+  },
+  "devDependencies": {
+    "@eslint/create-config": "^1.11.0",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.0.3",
+    "globals": "^17.4.0"
+  }
+}
