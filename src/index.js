@@ -1,13 +1,12 @@
 import fs from 'fs'
 import path from 'path'
 import _ from 'lodash'
+import parseData from './parsers.js'
 const readFile = (filepath) => {
   return fs.readFileSync(path.resolve(process.cwd(), filepath), 'utf-8')
 }
 
-const getDiff = (file1, file2) => {
-  const obj1 = JSON.parse(file1)
-  const obj2 = JSON.parse(file2)
+const getDiff = (obj1, obj2) => {
   const uniqKeys = _.sortBy(Object.keys({ ...obj1, ...obj2 }))
   const diffs = uniqKeys.map((key) => {
     if (!Object.hasOwn(obj1, key)) {
@@ -29,10 +28,12 @@ const getDiff = (file1, file2) => {
 }
 
 const gendiff = (filepath1, filepath2) => {
-  const file1 = readFile(filepath1)
-  const file2 = readFile(filepath2)
+  const ext1 = path.extname(filepath1)
+  const ext2 = path.extname(filepath2)
+  const obj1 = parseData(readFile(filepath1), ext1)
+  const obj2 = parseData(readFile(filepath2), ext2)
 
-  const diff = getDiff(file1, file2)
+  const diff = getDiff(obj1, obj2)
   return `{\n${diff.join('\n')}\n}`
 }
 
