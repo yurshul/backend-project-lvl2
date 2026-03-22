@@ -2,15 +2,21 @@ install:
 	npm ci
 
 gendiff:
-	node bin/gendiff.js
+	node bin/gendiff.js -h
 
-status: lint
+review: lint-fix test
 	git status
 
 test:
 	npx jest
 
-lint: 
+test-coverage:
+	npx jest --coverage
+
+lint:
+	npx eslint .
+
+lint-fix:
 	npx eslint . --fix
 
 publish:
