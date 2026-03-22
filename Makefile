@@ -7,6 +7,9 @@ gendiff:
 status: lint
 	git status
 
+test:
+	npx jest
+
 lint: 
 	npx eslint . --fix
 
