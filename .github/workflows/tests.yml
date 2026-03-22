@@ -1,0 +1,17 @@
+name: tests
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+
+      - run: make install
+
+      - run: npx eslint .
+
+      - run: make test
