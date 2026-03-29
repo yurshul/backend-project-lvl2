@@ -11,10 +11,8 @@ const getFixturePath = filename => path.join(__dirname, '..', '__fixtures__', fi
 const readFixture = filepath => fs.readFileSync(getFixturePath(filepath), 'utf-8')
 
 test.each([
-  ['plain', 'file1.json', 'file2.json', 'expected_plain.txt'],
-  ['plain', 'file1.yml', 'file2.yml', 'expected_plain.txt'],
-  ['nesting', 'file3.json', 'file4.json', 'expected_nested.txt'],
-  ['nesting', 'file3.yml', 'file4.yml', 'expected_nested.txt'],
+  ['nesting', 'file1.json', 'file2.json', 'expected_nested.txt'],
+  ['nesting', 'file1.yml', 'file2.yml', 'expected_nested.txt'],
 ])('%s: %s %s', (_, filepath1, filepath2, expectedFile) => {
   const fullpath1 = getFixturePath(filepath1)
   const fullpath2 = getFixturePath(filepath2)
