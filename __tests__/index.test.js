@@ -15,6 +15,8 @@ test.each([
   ['stylish', 'file1.yml', 'file2.yml', 'stylish', 'expected_stylish.txt'],
   ['plain', 'file1.json', 'file2.json', 'plain', 'expected_plain.txt'],
   ['plain', 'file1.yml', 'file2.yml', 'plain', 'expected_plain.txt'],
+  ['json', 'file1.json', 'file2.json', 'json', 'expected_json.txt'],
+  ['json', 'file1.yml', 'file2.yml', 'json', 'expected_json.txt'],
 ])('%s: %s %s', (_, filepath1, filepath2, format, expectedFile) => {
   const fullpath1 = getFixturePath(filepath1)
   const fullpath2 = getFixturePath(filepath2)
