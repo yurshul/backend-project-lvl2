@@ -1,5 +1,5 @@
 {
-  "name": "@hexlet/code",
+  "name": "gendiff",
   "version": "1.0.0",
   "description": "A CLI tool for finding differences between two data structures",
   "bin": {
@@ -10,13 +10,13 @@
     "json",
     "yml"
   ],
-  "homepage": "https://github.com/yurshul/backend-project-lvl2#readme",
+  "homepage": "https://github.com/yurshul/gendiff#readme",
   "bugs": {
-    "url": "https://github.com/yurshul/backend-project-lvl2/issues"
+    "url": "https://github.com/yurshul/gendiff/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yurshul/backend-project-lvl2.git"
+    "url": "git+https://github.com/yurshul/gendiff.git"
   },
   "license": "ISC",
   "author": "Yuriy Shulga",
